@@ -1,0 +1,12 @@
+.form__buttons{
+    width: 28px;
+    height: 28px;
+    color: #ffffff;
+    border: 1px #008000 solid;
+    background-color: #008000;   
+}
+
+.form__buttons--delete {
+    border: 1px #ff0000 solid;
+    background-color: #ff0000;   
+}
