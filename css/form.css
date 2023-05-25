@@ -15,3 +15,7 @@
 .form__buttons--done {
     color: #ffffff;
 }
+
+.form__textDone {
+    text-decoration: line-through;
+}
