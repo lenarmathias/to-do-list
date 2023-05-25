@@ -5,6 +5,14 @@
 
     const tasks = [];
 
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+        });
+
+        render();
+    };
+
     const render = () => {
         let htmlString = "";
 
@@ -21,6 +29,14 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+
+        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+
+        if (newTaskContent === "") {
+            return;
+        }
+
+        addNewTask(newTaskContent);
     };
 
     const init = () => {
