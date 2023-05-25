@@ -12,6 +12,21 @@
 
         render();
     };
+    
+    const removeTask = (index) => {
+        tasks.splice(index, 1);
+        render();
+    };
+
+    const bindEvents = () => {
+        const removeButtons = document.querySelectorAll(".js-removeButton");
+
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                removeTask(index);
+            });
+        });
+    };
 
     const render = () => {
         let htmlString = "";
@@ -20,11 +35,16 @@
             htmlString += `
             <li>
                 ${task.content}
+                <button class="form__buttons form__buttons--delete js-removeButton">
+                <i class="fa-regular fa-trash-can"></i>
+                </button>
             </li>
             `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        bindEvents();
     };
 
     const onFormSubmit = (event) => {
