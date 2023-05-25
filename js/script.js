@@ -13,6 +13,13 @@
         render();
     };
 
+    const submitReload = () => {
+        const taskInput = document.querySelector(".js-newTask");
+
+        taskInput.value = "";
+        taskInput.focus();
+    };
+
     const removeTask = (index) => {
         tasks.splice(index, 1);
         render();
@@ -76,6 +83,7 @@
         }
 
         addNewTask(newTaskContent);
+        submitReload();
     };
 
     const init = () => {
