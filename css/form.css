@@ -1,12 +1,17 @@
 .form__buttons{
     width: 28px;
     height: 28px;
-    color: #ffffff;
+    color: #008000;
     border: 1px #008000 solid;
     background-color: #008000;   
 }
 
 .form__buttons--delete {
+    color: #ffffff;
     border: 1px #ff0000 solid;
     background-color: #ff0000;   
+}
+
+.form__buttons--done {
+    color: #ffffff;
 }
