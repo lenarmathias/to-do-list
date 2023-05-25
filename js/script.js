@@ -19,9 +19,17 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+    };
+
     const init = () => {
         welcome();
         render();
+
+        const form = document.querySelector(".js-form");
+
+        form.addEventListener("submit", onFormSubmit);
     };
 
     init();
