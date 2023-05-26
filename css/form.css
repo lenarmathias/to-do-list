@@ -9,6 +9,18 @@
     margin-top: 10px;
 }
 
+.form__addTaskButton {
+    border: none;
+    background-color: #008080;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.form__addTaskButton:active {
+    background-color: #009090;
+}
+
 .form__buttons{
     width: 28px;
     height: 28px;
