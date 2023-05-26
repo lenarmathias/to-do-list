@@ -22,7 +22,7 @@
 
     const removeTask = (index) => {
         tasks.splice(index, 1);
-        
+
         render();
     };
 
@@ -55,11 +55,11 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li>
+            <li class="form__tasksListItem">
                 <button class="form__buttons${task.done ? " form__buttons--done" : ""} js-doneButton">
                 <i class="fa-solid fa-check"></i>
                 </button>
-                <span${task.done ? " class=\"form__textDone\"" : ""}>
+                <span class="form__listItemText${task.done ? " form__textDone" : ""}">
                 ${task.content}
                 </span>
                 <button class="form__buttons form__buttons--delete js-removeButton">

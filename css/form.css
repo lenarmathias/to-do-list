@@ -49,8 +49,20 @@
 
 .form__tasksList {
     list-style: none;
-    /* margin-left: 0; */
+    margin-bottom: 0;
     padding: 0;
+}
+
+.form__tasksListItem {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    border-bottom: 2px #f0f0f0 solid;
+    margin-top: 20px;
+    padding: 0 10px 10px;
+}
+
+.form__listItemText {
+    padding: 5px 10px;
 }
 
 .form__buttons {
