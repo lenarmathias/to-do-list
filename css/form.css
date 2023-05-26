@@ -1,3 +1,14 @@
+.form__separateContainer {
+    padding: 20px;
+    border: 1px #f0f0f0 solid;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px 0px #00000010;
+}
+
+.form__separateContainer--topGap {
+    margin-top: 10px;
+}
+
 .form__buttons{
     width: 28px;
     height: 28px;
