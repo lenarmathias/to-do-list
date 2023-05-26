@@ -36,7 +36,7 @@
 
 @media (max-width: 767px) {
     .form__addTaskButton {
-        width: 100%;
+        flex-grow: 1;
         margin-top: 10px;
         margin-left: 0;
     }
