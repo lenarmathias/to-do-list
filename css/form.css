@@ -5,8 +5,20 @@
     box-shadow: 0px 0px 5px 0px #00000010;
 }
 
+.form__separateContainer--flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .form__separateContainer--topGap {
     margin-top: 10px;
+}
+
+.form__newTaskInput {
+    flex-grow: 1;
+    height: 38.4px;
+    border: 1px #e0e0e0 solid;
+    padding: 10px;
 }
 
 .form__addTaskButton {
@@ -15,24 +27,33 @@
     font-family: "Montserrat", sans-serif;
     color: #ffffff;
     padding: 10px;
+    margin-left: 20px;
 }
 
 .form__addTaskButton:active {
     background-color: #009090;
 }
 
-.form__buttons{
+@media (max-width: 767px) {
+    .form__addTaskButton {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+.form__buttons {
     width: 28px;
     height: 28px;
     color: #008000;
     border: 1px #008000 solid;
-    background-color: #008000;   
+    background-color: #008000;
 }
 
 .form__buttons--delete {
     color: #ffffff;
     border: 1px #ff0000 solid;
-    background-color: #ff0000;   
+    background-color: #ff0000;
 }
 
 .form__buttons--done {
