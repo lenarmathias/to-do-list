@@ -32,6 +32,15 @@ You can change the status of a task to 'done' by clicking the green button. Alte
 
 ---
 
+## Tools 
+
+- **Visual Studio Code**: A popular text editor that was used to write and edit the application's code.
+- **Google Fonts**: A free online library of fonts that was used to enhance the application's typography and overall design.
+- **Font Awesome**: A comprehensive icon toolkit that provides a wide range of icons to enhance the visual elements of the application. It offers a collection of scalable vector icons that can be easily customized and integrated into the project's user interface.
+- **Git/GitHub**: A version control system and online repository that was used to track changes to the application's code.
+
+---
+
 ## Contact
 
 If you have any questions or feedback regarding this project, please feel free to contact me:
