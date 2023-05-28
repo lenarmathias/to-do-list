@@ -1,8 +1,4 @@
 {
-    const welcome = () => {
-        console.log("Hello World!");
-    };
-
     const tasks = [];
 
     const addNewTask = (newTaskContent) => {
@@ -88,7 +84,6 @@
     };
 
     const init = () => {
-        welcome();
         render();
 
         const form = document.querySelector(".js-form");
