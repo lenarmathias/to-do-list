@@ -50,6 +50,7 @@
 
 .section__tasksList {
     list-style: none;
+    margin-top: 0;
     margin-bottom: 0;
     padding: 0;
 }
@@ -60,6 +61,10 @@
     border-bottom: 2px #f0f0f0 solid;
     margin-top: 20px;
     padding: 0 10px 10px;
+}
+
+.section__tasksListItem:first-child {
+    margin-top: 0;
 }
 
 .section__listItemText {
