@@ -1,4 +1,10 @@
 {
+    const appStartFocus = () => {
+        const taskInput = document.querySelector(".js-newTask");
+
+        taskInput.focus();
+    };
+
     const tasks = [];
 
     const addNewTask = (newTaskContent) => {
@@ -84,6 +90,8 @@
     };
 
     const init = () => {
+        window.addEventListener("DOMContentLoaded", appStartFocus);
+
         render();
 
         const form = document.querySelector(".js-form");
