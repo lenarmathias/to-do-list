@@ -59,7 +59,7 @@
             htmlString += `
             <li class="section__tasksListItem">
                 <button class="section__buttons js-doneButton">
-                <i${task.done ? " class=\"fa-solid fa-check\"" : ""}></i>
+                ${task.done ? "&#10004" : ""}
                 </button>
                 <span class="section__listItemText${task.done ? " section__textDone" : ""}">
                 ${task.content}
