@@ -1,32 +1,33 @@
-.form__titleText {
+.section__titleText {
     font-weight: 700;
     font-size: 18px;
+    margin: 0;
 }
 
-.form__separateContainer {
+.section__separateContainer {
     padding: 20px;
     border: 1px #f0f0f0 solid;
     background-color: #ffffff;
     box-shadow: 0px 0px 5px 0px #00000010;
 }
 
-.form__separateContainer--flex {
+.section__separateContainer--flex {
     display: flex;
     flex-wrap: wrap;
 }
 
-.form__separateContainer--topGap {
+.section__separateContainer--topGap {
     margin-top: 10px;
 }
 
-.form__newTaskInput {
+.section__newTaskInput {
     flex-grow: 1;
     height: 38.4px;
     border: 1px #e0e0e0 solid;
     padding: 10px;
 }
 
-.form__addTaskButton {
+.section__addTaskButton {
     border: none;
     background-color: #008080;
     font-family: "Montserrat", sans-serif;
@@ -35,25 +36,25 @@
     margin-left: 20px;
 }
 
-.form__addTaskButton:active {
+.section__addTaskButton:active {
     background-color: #009090;
 }
 
 @media (max-width: 767px) {
-    .form__addTaskButton {
+    .section__addTaskButton {
         flex-basis: 100%;
         margin-top: 10px;
         margin-left: 0;
     }
 }
 
-.form__tasksList {
+.section__tasksList {
     list-style: none;
     margin-bottom: 0;
     padding: 0;
 }
 
-.form__tasksListItem {
+.section__tasksListItem {
     display: grid;
     grid-template-columns: auto 1fr auto;
     border-bottom: 2px #f0f0f0 solid;
@@ -61,11 +62,11 @@
     padding: 0 10px 10px;
 }
 
-.form__listItemText {
+.section__listItemText {
     padding: 5px 10px;
 }
 
-.form__buttons {
+.section__buttons {
     width: 28px;
     height: 28px;
     color: #ffffff;
@@ -73,10 +74,10 @@
     background-color: #008000;
 }
 
-.form__buttons--delete {
+.section__buttons--delete {
     background-color: #ff0000;
 }
 
-.form__textDone {
+.section__textDone {
     text-decoration: line-through;
 }

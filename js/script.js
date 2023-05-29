@@ -57,14 +57,14 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li class="form__tasksListItem">
-                <button class="form__buttons js-doneButton">
+            <li class="section__tasksListItem">
+                <button class="section__buttons js-doneButton">
                 <i${task.done ? " class=\"fa-solid fa-check\"" : ""}></i>
                 </button>
-                <span class="form__listItemText${task.done ? " form__textDone" : ""}">
+                <span class="section__listItemText${task.done ? " section__textDone" : ""}">
                 ${task.content}
                 </span>
-                <button class="form__buttons form__buttons--delete js-removeButton">
+                <button class="section__buttons section__buttons--delete js-removeButton">
                 <i class="fa-regular fa-trash-can"></i>
                 </button>
             </li>
