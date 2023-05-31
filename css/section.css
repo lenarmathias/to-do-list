@@ -79,8 +79,16 @@
     background-color: #008000;
 }
 
+.section__buttons:hover {
+    background-color: #00be00;
+}
+
 .section__buttons--delete {
     background-color: #ff0000;
+}
+
+.section__buttons--delete:hover {
+    background-color: #ff4e4e;
 }
 
 .section__textDone {
