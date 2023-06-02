@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form__newTaskInput {
+    flex-grow: 1;
+    height: 38.4px;
+    border: 1px #e0e0e0 solid;
+    padding: 10px;
+}
+
+.form__addTaskButton {
+    border: none;
+    background-color: #008080;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.form__addTaskButton:active {
+    background-color: #009090;
+}
+
+@media (max-width: 767px) {
+    .form__addTaskButton {
+        flex-basis: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}

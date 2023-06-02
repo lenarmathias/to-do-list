@@ -1,0 +1,46 @@
+.tasks__tasksList {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.tasks__tasksListItem {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    border-bottom: 2px #f0f0f0 solid;
+    margin-top: 20px;
+    padding: 0 10px 10px;
+}
+
+.tasks__tasksListItem:first-child {
+    margin-top: 0;
+}
+
+.tasks__listItemText {
+    padding: 5px 10px;
+}
+
+.tasks__buttons {
+    width: 28px;
+    height: 28px;
+    color: #ffffff;
+    border: none;
+    background-color: #008000;
+}
+
+.tasks__buttons:hover {
+    background-color: #00be00;
+}
+
+.tasks__buttons--delete {
+    background-color: #ff0000;
+}
+
+.tasks__buttons--delete:hover {
+    background-color: #ff4e4e;
+}
+
+.tasks__textDone {
+    text-decoration: line-through;
+}
