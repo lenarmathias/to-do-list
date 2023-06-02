@@ -27,6 +27,7 @@
     color: #ffffff;
     border: none;
     background-color: #008000;
+    transition: 1s;
 }
 
 .tasks__buttons:hover {
@@ -38,7 +39,7 @@
 }
 
 .tasks__buttons--delete:hover {
-    background-color: #ff4e4e;
+    background-color: #ff5656;
 }
 
 .tasks__textDone {
