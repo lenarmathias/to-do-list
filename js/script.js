@@ -1,16 +1,17 @@
 {
+    let tasks = [];
+
     const appStartFocus = () => {
         const taskInput = document.querySelector(".js-newTask");
 
         taskInput.focus();
     };
 
-    const tasks = [];
-
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            { content: newTaskContent },
+        ];
 
         render();
     };
@@ -22,14 +23,27 @@
         taskInput.focus();
     };
 
+    const addTaskButtonReload = () => {
+        const taskInput = document.querySelector(".js-newTask");
+
+        taskInput.focus();
+    };
+
     const removeTask = (index) => {
-        tasks.splice(index, 1);
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1)
+        ];
 
         render();
     };
 
     const toggleTaskDone = (index) => {
-        tasks[index].done = !tasks[index].done;
+        tasks = [
+            ...tasks.slice(0, index),
+            { ...tasks[index], done: !tasks[index].done },
+            ...tasks.slice(index + 1)
+        ];
 
         render()
     };
@@ -42,7 +56,7 @@
                 removeTask(index);
             });
         });
-        
+
         const doneButtons = document.querySelectorAll(".js-doneButton");
 
         doneButtons.forEach((doneButton, index) => {
@@ -52,7 +66,12 @@
         });
     };
 
-    const render = () => {
+    const bindButtonsEvents = () => {
+        const addTaskButton = document.querySelector(".js-addTaskButton");
+        addTaskButton.addEventListener("click", addTaskButtonReload);
+    };
+
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -72,8 +91,12 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+    };
 
+    const render = () => {
+        renderTasks()
         bindEvents();
+        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
