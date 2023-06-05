@@ -11,6 +11,31 @@
     box-shadow: 0px 0px 5px 0px #00000010;
 }
 
-.section__separateContainer--topGap {
+.section__separateContainer--topGapAndFlex {
     margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .section__separateContainer--topGapAndFlex {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3 1fr);
+    }
+}
+
+.section__buttons {
+    border: none;
+    background: none;
+    color: teal;
+    transition: 1s;
+}
+
+.section__buttons:hover {
+    color: #00a1a1;
+}
+
+.section__buttons:active {
+    color: #00b6b6;
 }
