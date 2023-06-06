@@ -28,8 +28,7 @@
 .section__buttons {
     border: none;
     background: none;
-    color: teal;
-    transition: 1s;
+    color: #008080;
 }
 
 .section__buttons:hover {
@@ -38,4 +37,12 @@
 
 .section__buttons:active {
     color: #00b6b6;
+}
+
+.section__buttons:disabled {
+    color: #808080;
+}
+
+.section--hidden {
+    display: none !important;
 }
