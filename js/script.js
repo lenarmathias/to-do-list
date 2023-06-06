@@ -56,6 +56,7 @@
 
         if (list.contains(doneTasks)) {
             hideDoneButton.addEventListener("click", hideDoneTasks);
+            hideDoneButton.addEventListener("click", hideAllDoneButtonRename);
         }
     };
 
@@ -65,9 +66,19 @@
         listItems.forEach((listItem) => {
             listItem.classList.toggle("section--hidden");
         });
+    };
 
-        render();
-        console.log(listItems);
+    const hideAllDoneButtonRename = () => {
+        let hideDoneButton = document.querySelector(".js-hideDoneTasks");
+        const doneListItems = document.getElementsByClassName("js-listItem");
+
+        Array.from(doneListItems).forEach(doneListItem => {
+            if (doneListItem.classList.contains("section--hidden")) {
+                hideDoneButton.innerText = "Pokaż ukończone";
+            } else {
+                hideDoneButton.innerText = "Ukryj ukończone";
+            };
+        });
     };
 
     const toggleAllDone = () => {
