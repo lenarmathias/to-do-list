@@ -17,12 +17,6 @@
         taskInput.focus();
     };
 
-    const addTaskButtonReload = () => {
-        const taskInput = document.querySelector(".js-newTask");
-
-        taskInput.focus();
-    };
-
     const removeTask = (index) => {
         tasks = [
             ...tasks.slice(0, index),
@@ -110,9 +104,6 @@
                 toggleTaskDone(index);
             });
         });
-
-        const addTaskButton = document.querySelector(".js-addTaskButton");
-        addTaskButton.addEventListener("click", addTaskButtonReload);
 
         const toggleAllDoneTasks = document.querySelector(".js-toggleAllDone");
         toggleAllDoneTasks.addEventListener("click", toggleAllDone);
