@@ -40,7 +40,7 @@
 }
 
 .section__buttons:disabled {
-    color: #808080;
+    color: #80808060;
 }
 
 .section--hidden {
