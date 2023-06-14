@@ -31,15 +31,9 @@
     };
 
     const hideDoneTasks = () => {
-        const listItems = document.querySelectorAll(".js-listItem");
-
-        listItems.forEach((listItem) => {
-            listItem.classList.toggle("section--hidden");
-        });
-
         hiddenDoneTasks = !hiddenDoneTasks;
-        renderButtons();
-        bindButtonsEvents();
+
+        render();
     };
 
     const toggleAllDone = () => {
@@ -68,16 +62,15 @@
             });
         });
 
-        const list = document.querySelector(".js-tasks");
-        const taskItems = list.querySelector(".js-listItem");
         const hideDoneButton = document.querySelector(".js-hideDoneTasks");
-        const toggleAllDoneTasks = document.querySelector(".js-toggleAllDone");
 
-        if (list.contains(taskItems)) {
+        if (hideDoneButton) {
             hideDoneButton.addEventListener("click", hideDoneTasks);
         }
 
-        if (list.innerHTML !== "") {
+        const toggleAllDoneTasks = document.querySelector(".js-toggleAllDone");
+
+        if (toggleAllDoneTasks) {
             toggleAllDoneTasks.addEventListener("click", toggleAllDone);
         }
     };
@@ -87,7 +80,7 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li class="tasks__tasksListItem${task.done ? " js-listItem" : ""}">
+            <li class="tasks__tasksListItem js-listItem${task.done && hiddenDoneTasks ? " section--hidden" : ""}">
                 <button class="tasks__buttons js-doneButton">
                 ${task.done ? "&#10004" : ""}
                 </button>
@@ -106,6 +99,7 @@
 
     const renderButtons = () => {
         const taskList = document.querySelector(".js-tasks").innerHTML;
+        const listItem = document.querySelector(".js-listItem");
         let htmlButtonsString = "";
 
         if (taskList !== "") {
@@ -114,7 +108,7 @@
                     Lista zadań
                 </h2>
                 <button class="section__buttons js-hideDoneTasks">
-                ${hiddenDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}
+                ${listItem.classList.contains("section--hidden") ? "Pokaż ukończone" : "Ukryj ukończone"}
                 </button>
                 <button class="section__buttons js-toggleAllDone"
                 ${tasks.every(({ done }) => done === true) ? " disabled" : ""}>
