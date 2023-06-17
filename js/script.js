@@ -31,7 +31,9 @@
     };
 
     const hideDoneTasks = () => {
-        hiddenDoneTasks = !hiddenDoneTasks;
+        if (tasks.some(({ done }) => done)) {
+            hiddenDoneTasks = !hiddenDoneTasks;
+        }
 
         render();
     };
