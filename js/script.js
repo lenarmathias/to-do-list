@@ -106,22 +106,13 @@
 
         if (taskList !== "") {
             htmlButtonsString = `
-                <h2 class="section__titleText">
-                    Lista zadań
-                </h2>
                 <button class="section__buttons js-hideDoneTasks">
-                ${listItem.classList.contains("section--hidden") ? "Pokaż ukończone" : "Ukryj ukończone"}
+                ${hiddenDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}
                 </button>
                 <button class="section__buttons js-toggleAllDone"
                 ${tasks.every(({ done }) => done === true) ? " disabled" : ""}>
                     Ukończ wszystkie
                 </button>
-                `;
-        } else {
-            htmlButtonsString = `
-                <h2 class="section__titleText">
-                    Lista zadań
-                </h2>
                 `;
         }
 
