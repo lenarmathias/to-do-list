@@ -90,7 +90,7 @@
                 ${task.content}
                 </span>
                 <button class="tasks__buttons tasks__buttons--delete js-removeButton">
-                <i class="fa-regular fa-trash-can"></i>
+                &#128465
                 </button>
             </li>
             `;
